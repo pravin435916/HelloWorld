@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    button{
+        background: #b48888;
+        position: absolute;
+        border-radius:20px;
+        padding: 5px;
+        transform: translate(-50%,-50%);
+        top: 50%;left: 50%;
+        min-width: 200px;
+        font-size: 1.5rem;
+    }
+    .active{
+        background: #ff2b75;
+        transition: 1s;
+        
+    }
+    .active #btnText{
+        transform: translateX(-20px);
+        transition: 1s;
+    }
+    #btnText{  
+        position: relative;
+        right: 20px;
+    }
+    i {
+        position: absolute;
+        right: 15px;
+        top: 3px;
+        color: white;
+        transition: 1s;
+        font-size: 1.8rem;
+    }
+</style>
+<body>
+    <button id="btn">
+        <p id="btnText">Submit</p>
+        
+    </button>
+    <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+
+        btn.onclick = () => {
+            btnText.innerHTML = "Thanks" + "<i class='fa-sharp fa-solid fa-check fa-bounce'></i>";
+            btn.classList.add("active");
+        };
+    </script>
+</body>
+</html>
